@@ -1,0 +1,6 @@
+.project
+.pydevproject
+log.txt
+data/
+.README.md.html
+*.csv 
