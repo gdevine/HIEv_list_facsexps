@@ -97,7 +97,6 @@ with open(fac_csvfile, 'a') as faccsvfile:
         faccsvwriter.writerow(fac_record)
         
         # Visit each facility experiment and extract info
-#         with open(exp_csvfile, 'wb') as expcsvfile:
         with open(exp_csvfile, 'a') as expcsvfile:
             expcsvwriter = csv.writer(expcsvfile, delimiter=',', encoding='utf-8')
             
@@ -121,7 +120,6 @@ with open(fac_csvfile, 'a') as faccsvfile:
                 for value in ['name', 'description', 'start_date', 'subject']:
                   exp_value = soup.find(attrs={"id": value+"_display"})
                   if exp_value:
-#                     exp_record.append(exp_value['title'].replace(",", ":"))
                     exp_record.append(exp_value['title'])
                   else:
                     exp_record.append("")
